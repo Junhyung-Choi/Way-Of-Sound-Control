@@ -111,11 +111,6 @@ function drawGoButton()
 
 function mouseClickedMenu()
 {
-    if(!isSoundLooped)
-    {
-        bgm.loop();
-        isSoundLooped = true;
-    }
     menuisWrongClicked = false;
     menuisVolumeChangeMode = isMouseInRect(mouseX,mouseY,menuVolumeMinX, menuVolumeMinY, menuVolumeWidth, 50);
     // 450, 800  , 1150

@@ -1,5 +1,12 @@
 function mousePressed()
 {
+    if(!isSoundLooped)
+    {
+        bgm.loop();
+        getAudioContext().resume();
+        isSoundLooped = true;
+        console.log("Sound looped");
+    }
     switch(modeNumber){
         // 시작 화면
         case 0:
