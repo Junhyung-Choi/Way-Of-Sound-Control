@@ -10,8 +10,6 @@ function preload()
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    getAudioContext().resume();
-    bgm.loop();
     setupMenu();
     setupGallery();
 }

@@ -6,6 +6,8 @@ var menuVolumeMinY = 0;
 let menuisVolumeChangeMode = false;
 var menuisWrongClicked = false;
 
+var isSoundLooped = false;
+
 function setupMenu()
 {
     menuVolumeMinX = windowWidth/2 - 240;
@@ -109,6 +111,11 @@ function drawGoButton()
 
 function mouseClickedMenu()
 {
+    if(!isSoundLooped)
+    {
+        bgm.loop();
+        isSoundLooped = true;
+    }
     menuisWrongClicked = false;
     menuisVolumeChangeMode = isMouseInRect(mouseX,mouseY,menuVolumeMinX, menuVolumeMinY, menuVolumeWidth, 50);
     // 450, 800  , 1150
